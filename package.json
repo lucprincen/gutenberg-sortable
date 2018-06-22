@@ -1,0 +1,14 @@
+{
+    "name": "gutenberg-sortable",
+    "version": "1.0.0",
+    "license": "MIT",
+    "main": "index.js",
+    "author": "Luc Princen",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com:lucprincen/gutenberg-sortable.git"
+    },
+    "dependencies": {
+        "react-sortable-hoc": "^0.8.3"
+    }
+}

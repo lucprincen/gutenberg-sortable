@@ -72,6 +72,7 @@ class Sortable extends Component {
             <SortableList
                 axis={this.getAxis()}
                 items={items}
+                onSortStart={this.onSortStart}
                 onSortEnd={this.onSortEnd}
             />
         );

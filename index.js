@@ -106,6 +106,7 @@ var Sortable = function (_Component) {
                 _react2.default.createElement(SortableList, {
                     axis: this.getAxis(),
                     items: items,
+                    onSortStart: this.onSortStart,
                     onSortEnd: this.onSortEnd
                 })
             );

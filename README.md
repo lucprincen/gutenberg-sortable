@@ -22,7 +22,7 @@ Using npm:
 
 And then, using a module bundler that supports ES2015 modules (like [webpack](https://webpack.js.org/)):
 ```
-import {Sortable} from 'gutenberg-sortable';
+import Sortable from 'gutenberg-sortable';
 
 //or, if you're not using ES6:
 var Sortable = require('gutenberg-sortable');
@@ -78,9 +78,9 @@ Sortable is meant as a wrapper. Wrap it around everything you'd like to be sorta
 
 There's a few options you can pass the component:
 
-*axis* - The axis you'd like to sort on. This example is set to 'grid', but X and Y are also available. Y is the default.
+**axis** - The axis you'd like to sort on. This example is set to 'grid', but X and Y are also available. Y is the default.
 
-*onSortStart* - What to do when sorting starts. This is a function that will get the node and it's index plus the event as it's properties returned. A simple example for this:
+**onSortStart** - What to do when sorting starts. This is a function that will get the node and it's index plus the event as it's properties returned. A simple example for this:
 ```
 const highlight = ({node, index}, event) => {
     node.classList.add('highlight');
@@ -92,7 +92,7 @@ const highlight = ({node, index}, event) => {
 This will give the picked up node a "highlight" class and log a message with the nodes current index.
 
 
-*onSortEnd* - What to do when sorting has finished. This function will return the items you passed along as a prop, but now reordered according to the users' action. In the basic example above we just reset the attribute with the new sorted values.
+**onSortEnd** - What to do when sorting has finished. This function will return the items you passed along as a prop, but now reordered according to the users' action. In the basic example above we just reset the attribute with the new sorted values.
 
 ---
 

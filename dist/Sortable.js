@@ -4,7 +4,25 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
 
 var _reactSortableHoc = require('react-sortable-hoc');
 
@@ -18,22 +36,16 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
 var Component = wp.element.Component;
 
 var Sortable = function (_Component) {
-    _inherits(Sortable, _Component);
+    (0, _inherits3.default)(Sortable, _Component);
 
     //constructor
     function Sortable() {
-        _classCallCheck(this, Sortable);
+        (0, _classCallCheck3.default)(this, Sortable);
 
-        var _this = _possibleConstructorReturn(this, (Sortable.__proto__ || Object.getPrototypeOf(Sortable)).apply(this, arguments));
+        var _this = (0, _possibleConstructorReturn3.default)(this, (Sortable.__proto__ || (0, _getPrototypeOf2.default)(Sortable)).apply(this, arguments));
 
         _this.focusIndex = null;
 
@@ -48,7 +60,7 @@ var Sortable = function (_Component) {
      */
 
 
-    _createClass(Sortable, [{
+    (0, _createClass3.default)(Sortable, [{
         key: 'getSortableList',
         value: function getSortableList() {
             var _this2 = this;
@@ -63,7 +75,7 @@ var Sortable = function (_Component) {
             return (0, _reactSortableHoc.SortableContainer)(function () {
 
                 //loop through all available children
-                return _react2.default.createElement(
+                return wp.element.createElement(
                     'div',
                     { className: (0, _classnames2.default)('components-sortable', className) },
                     children.map(function (child, index) {
@@ -82,7 +94,7 @@ var Sortable = function (_Component) {
                         }
 
                         //display Sortable Element
-                        return _react2.default.createElement(SortableItem, { key: 'item-' + index, index: index, item: items[index] });
+                        return wp.element.createElement(SortableItem, { key: 'item-' + index, index: index, item: items[index] });
                     })
                 );
             });
@@ -103,7 +115,7 @@ var Sortable = function (_Component) {
 
             return (
                 //return the sortable list, with props from our upper-lever component
-                _react2.default.createElement(SortableList, {
+                wp.element.createElement(SortableList, {
                     axis: this.getAxis(),
                     items: items,
                     onSortStart: this.onSortStart,
@@ -257,7 +269,6 @@ var Sortable = function (_Component) {
             }, 10);
         }
     }]);
-
     return Sortable;
 }(Component);
 

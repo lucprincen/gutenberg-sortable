@@ -77,6 +77,9 @@ When you register an attribute to work with Sortable, it's probably easiest to u
 ### Sortable 
 Sortable is meant as a wrapper. Wrap it around everything you'd like to be sortable. It will add a parent div around all the children. You should also pass the attribute (in this case images) as a prop called "items". This ensures you will get back the re-sorted prop in your sortable events.
 
+
+## Options
+
 There's a few options you can pass the component:
 
 **axis** - The axis you'd like to sort on. This example is set to 'grid', but X and Y are also available. Y is the default.
@@ -95,13 +98,24 @@ This will give the picked up node a "highlight" class and log a message with the
 
 **onSortEnd** - What to do when sorting has finished. This function will return the items you passed along as a prop, but now reordered according to the users' action. In the basic example above we just reset the attribute with the new sorted values.
 
+## FAQ
+
+#### Module not found: can't resolve React-DOM
+If you encounter this error while compiling your block, you haven't loaded in React and React Dom from WP Core as an external in your build process. This is because Sortable uses a native React component to provide certain functionality. 
+Add the following to your webpack.config.js, and everything should work fine:
+
+```javascript
+externals: {
+    'react': 'React',
+    'react-dom': 'ReactDOM'
+},
+```
+
 
 ## Dependencies
 
 Gutenberg Sortable depends on the [react-sortable-hoc](https://github.com/clauderic/react-sortable-hoc) package by [Claudéric Demers](https://github.com/clauderic).
 
-
----
 
 ## Contributions
 

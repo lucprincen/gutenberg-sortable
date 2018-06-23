@@ -1,7 +1,8 @@
 # Gutenberg Sortable
-A Gutenberg component to turn anything into an animated, touch- and a11y-friendly sortable list. Like these images in a logo-block:
+A Gutenberg component to turn anything into an animated, touch- and a11y-friendly sortable list. 
+Like these images in a block with desktop wallpapers:
 
-![images in a logo block that are sorted by dragging and dropping](http://staging.lucp.nl/static/gutenberg-sortable.gif)
+![images in a wallpaper block that are sorted by dragging and dropping](http://staging.lucp.nl/static/gutenberg-sortable.gif)
 
 ---
 

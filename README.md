@@ -16,7 +16,6 @@ Like these images in a block with desktop wallpapers:
 - Touch support 👌
 - Keyboard support 💪
 
----
 
 ## Installation
 
@@ -24,14 +23,13 @@ Using npm:
 `$ npm install gutenberg-sortable --save`
 
 And then, using a module bundler that supports ES2015 modules (like [webpack](https://webpack.js.org/)):
-```
+```javascript
 import Sortable from 'gutenberg-sortable';
 
 //or, if you're not using ES6:
 var Sortable = require('gutenberg-sortable');
 ```
 
----
 
 ## Usage
 
@@ -77,7 +75,7 @@ Let's break that down:
 When you register an attribute to work with Sortable, it's probably easiest to use a source: 'query' attribute. This makes it so you can just add html or components to your Sortable.
 
 ### Sortable 
-Sortable is meant as a wrapper. Wrap it around everything you'd like to be sortable. It will add a parent div around all the children. You should also pass the attribute (in this case children) as a prop called "items". This ensures you will get back the re-sorted prop in your sortable events.
+Sortable is meant as a wrapper. Wrap it around everything you'd like to be sortable. It will add a parent div around all the children. You should also pass the attribute (in this case images) as a prop called "items". This ensures you will get back the re-sorted prop in your sortable events.
 
 There's a few options you can pass the component:
 
@@ -97,7 +95,6 @@ This will give the picked up node a "highlight" class and log a message with the
 
 **onSortEnd** - What to do when sorting has finished. This function will return the items you passed along as a prop, but now reordered according to the users' action. In the basic example above we just reset the attribute with the new sorted values.
 
----
 
 ## Dependencies
 

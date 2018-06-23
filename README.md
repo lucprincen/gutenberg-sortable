@@ -36,7 +36,7 @@ var Sortable = require('gutenberg-sortable');
 ## Usage
 
 Here's a basic example of the Sortable gutenberg component, used in a block.
-```
+```javascript
     //... skipping the usual registerBlockType settings, and getting straight to the attributes:
     attributes: {
         images: {
@@ -84,7 +84,7 @@ There's a few options you can pass the component:
 **axis** - The axis you'd like to sort on. This example is set to 'grid', but X and Y are also available. Y is the default.
 
 **onSortStart** - What to do when sorting starts. This is a function that will get the node and it's index plus the event as it's properties returned. A simple example for this:
-```
+```javascript
 const highlight = ({node, index}, event) => {
     node.classList.add('highlight');
     console.log( 'the element you\'ve picked up has an index of '+index );

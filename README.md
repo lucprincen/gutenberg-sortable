@@ -119,4 +119,4 @@ Gutenberg Sortable depends on the [react-sortable-hoc](https://github.com/claude
 
 ## Contributions
 
-All help is welcome! Please live your feature- and/org pull-request here! 😉
+All help is welcome! Please leave your feature- and/org pull-request here! 😉
